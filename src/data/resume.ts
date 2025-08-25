@@ -5,6 +5,7 @@ export const contact = {
     location: 'Poland',
     linkedin: 'https://www.linkedin.com/in/matveytreyvas/',
     github: 'https://github.com/maticht',
+    cv: 'https://eu.docworkspace.com/d/sICPCipbuAd26rsUG?sa=601.1037',
 }
 
 export const summary = `System & Business Analyst with a strong software engineering background and proven experience in requirements management, system analysis, and solution design. Skilled in bridging business needs with technical implementation, delivering clear documentation, and ensuring scalable system architectures. Experienced in BRD, SRS, User Stories, BPMN, UML diagrams, and API specifications. Looking to leverage technical and analytical expertise to design efficient solutions and drive business value.`

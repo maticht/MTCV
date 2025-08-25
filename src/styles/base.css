@@ -12,23 +12,114 @@ body {
     color: var(--text);
     font-family: var(--font);
 }
+:root {
+    --grid-size: 68px;
+}
+body {
+    background:
+            repeating-linear-gradient(
+                    90deg,
+                    color-mix(in oklab, rgb(85, 85, 85) 8%, transparent) 0 1px,
+                    transparent 1px var(--grid-size)
+            ),
+            repeating-linear-gradient(
+                    180deg,
+                    color-mix(in oklab, rgb(85, 85, 85) 8%, transparent) 0 1px,
+                    transparent 1px var(--grid-size)
+            ),
+            var(--bg);
+}
 
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: screen;
+    opacity: 0;
+}
+@media (max-width: 720px) { body { --grid-size: 56px; } }
+@media (max-width: 500px) { body { --grid-size: 48px; } }
+
+@media (prefers-reduced-motion: reduce) {
+    body::before, body::after { animation: none; opacity: 0; }
+}
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 25px
+    padding: 0 20px 20px;
 }
 
 main {
     display: block
 }
+main {
+    display: block;
+    --pg-w: 700px;
+    --pg-h: 1200px;
+    --pg-strength: 12%;
+    --pg-stop: 76%;
 
+    background-image:
+            radial-gradient(
+                    var(--pg-h) var(--pg-w) at 50% -6%,
+                    color-mix(in oklab, var(--accent) var(--pg-strength), transparent),
+                    transparent var(--pg-stop)
+            ), radial-gradient(
+                    var(--pg-w) var(--pg-h) at -6% 26%,
+                    color-mix(in oklab, var(--accent) var(--pg-strength), transparent),
+                    transparent var(--pg-stop)
+            ),
+            radial-gradient(
+                    var(--pg-w) var(--pg-h) at 104% 58%,
+                    color-mix(in oklab, var(--accent) var(--pg-strength), transparent),
+                    transparent var(--pg-stop)
+            ),
+            radial-gradient(
+                    var(--pg-w) var(--pg-h) at -6% 86%,
+                    color-mix(in oklab, var(--accent) var(--pg-strength), transparent),
+                    transparent var(--pg-stop)
+            );
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+@media (max-width: 720px) {
+    main {
+        --pg-w: 900px;
+        --pg-h: 1200px;
+        --pg-strength: 9%;
+
+        background-image:
+                radial-gradient(var(--pg-h) var(--pg-w) at 50% -4%, color-mix(in oklab, var(--accent) var(--pg-strength), transparent), transparent var(--pg-stop)),
+                radial-gradient(var(--pg-w) var(--pg-h) at -10% 28%, color-mix(in oklab, var(--accent) var(--pg-strength), transparent), transparent var(--pg-stop)),
+                radial-gradient(var(--pg-w) var(--pg-h) at 110% 56%, color-mix(in oklab, var(--accent) var(--pg-strength), transparent), transparent var(--pg-stop)),
+                radial-gradient(var(--pg-w) var(--pg-h) at -10% 86%, color-mix(in oklab, var(--accent) var(--pg-strength), transparent), transparent var(--pg-stop));
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        --pg-w: 720px;
+        --pg-h: 1400px;
+        --pg-strength: 8%;
+
+        background-image:
+                radial-gradient(var(--pg-h) var(--pg-w) at 50% -2%, color-mix(in oklab, var(--accent) var(--pg-strength), transparent), transparent var(--pg-stop)),
+                radial-gradient(var(--pg-w) var(--pg-h) at -10% 26%, color-mix(in oklab, var(--accent) var(--pg-strength), transparent), transparent var(--pg-stop)),
+                radial-gradient(var(--pg-w) var(--pg-h) at 110% 58%, color-mix(in oklab, var(--accent) var(--pg-strength), transparent), transparent var(--pg-stop)),
+                radial-gradient(var(--pg-w) var(--pg-h) at -10% 90%, color-mix(in oklab, var(--accent) var(--pg-strength), transparent), transparent var(--pg-stop));
+    }
+}
 .section {
     padding: 3.2rem 0
 }
 
 .section__title {
     font-family: var(--font-head);
+    text-shadow: 0 0 20px color-mix(in oklab, var(--accent) 55%, transparent);
     font-size: clamp(1.6rem, 3.2vw, 2.4rem);
     color: var(--accent);
     margin: 0 0 1.5rem;
@@ -74,7 +165,7 @@ main {
 .btn--ghost {
     background: transparent;
     color: var(--text);
-    border: 1px dashed var(--surface-2)
+    border: 2px dashed var(--surface-2)
 }
 
 .btn--small {
@@ -96,8 +187,9 @@ main {
 }
 
 .card {
-    background: var(--surface);
-    border: 1px solid var(--surface-2);
+    background: linear-gradient(123deg, var(--surface), transparent);
+    backdrop-filter: blur(4px);
+    border: 1px dashed var(--surface-2);
     border-radius: var(--radius);
     padding: 1rem
 }
@@ -111,20 +203,44 @@ main {
 .list {
     display: grid;
     gap: .65rem;
-    padding-left: 1.25rem
+    padding-left: 0;
 }
 
 .list__item {
-    list-style: square
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.list__item::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1em;
+    line-height: 1;
 }
 
 .bullets {
     display: grid;
     gap: .5rem;
-    padding-left: 1.25rem;
+    padding-left: 0;
     margin: 16px 0 4px;
 }
+.bullet__item {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5em;
+}
 
+.bullet__item::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1em;
+    line-height: 1;
+}
 .chips {
     display: flex;
     gap: .5rem;
@@ -135,8 +251,9 @@ main {
 }
 
 .chip {
-    background: var(--surface);
-    border: 1px solid var(--surface-2);
+    background: linear-gradient(123deg, var(--surface), transparent);
+    backdrop-filter: blur(4px);
+    border: 1px dashed var(--surface-2);
     border-radius: 999px;
     padding: .5rem .8rem
 }
@@ -144,8 +261,8 @@ main {
 .footer {
     border-top: 1px solid var(--surface-2);
     background: linear-gradient(to top, rgba(0, 0, 0, .25), transparent);
-    padding: 1.25rem 0;
-    margin-top: 2rem
+    padding: 1.5rem 0 .25rem;
+    margin-top: 0
 }
 
 .footer__inner {

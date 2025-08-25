@@ -13,7 +13,7 @@ export const Experience = () => (
                             <p className="timeline__period">{exp.period}</p>
                             <ul className="bullets">
                                 {exp.bullets.map((b, idx) => (
-                                    <li key={idx}>{b}</li>
+                                    <li className="bullet__item" key={idx}>{b}</li>
                                 ))}
                             </ul>
                         </div>

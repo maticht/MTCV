@@ -37,7 +37,8 @@
 }
 
 .timeline__content {
-    background: var(--surface);
+    background: linear-gradient(123deg, var(--surface), transparent);
+    backdrop-filter: blur(4px);
     border: 1px dashed var(--surface-2);
     border-radius: var(--radius);
     padding: 1rem
@@ -64,6 +65,15 @@
 
     .footer__inner {
         flex-direction: column;
+        align-items: flex-start
+    }
+}
+
+@media (max-width: 500px) {
+    .timeline__item {
+        display: grid;
+        grid-template-columns:56px 1fr;
+        gap: 0.5rem;
         align-items: flex-start
     }
 }

@@ -1,7 +1,7 @@
 import {skills} from '../data/resume'
 
 export const Skills = () => (
-    <section id="skills" className="section">
+    <section id="skills" className="section radial-accent-bg">
         <div className="container">
             <h2 className="section__title">Skills</h2>
             <div className="grid skills">
