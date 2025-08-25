@@ -203,43 +203,14 @@ main {
 .list {
     display: grid;
     gap: .65rem;
-    padding-left: 0;
-}
-
-.list__item {
-    list-style-type: none;
-    position: relative;
-    padding-left: 1.5em;
-}
-
-.list__item::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 1em;
-    line-height: 1;
+    padding-left: 1.25rem;
 }
 
 .bullets {
     display: grid;
     gap: .5rem;
-    padding-left: 0;
+    padding-left: 1.25rem;
     margin: 16px 0 4px;
-}
-.bullet__item {
-    list-style-type: none;
-    position: relative;
-    padding-left: 1.5em;
-}
-
-.bullet__item::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 1em;
-    line-height: 1;
 }
 .chips {
     display: flex;
