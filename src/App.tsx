@@ -7,20 +7,23 @@ import { Skills } from './components/Skills'
 import { Education } from './components/Education'
 import { Languages } from './components/Languages'
 import { Footer } from './components/Footer'
+import { SwipeTrail } from './components/SwipeTrail'
 
 function App() {
     return (
         <div className="app">
             <Header />
-            <main>
-                <Hero />
-                <Summary />
-                <Achievements />
-                <Experience />
-                <Skills />
-                <Education />
-                <Languages />
-            </main>
+            <SwipeTrail>
+                <main>
+                    <Hero />
+                    <Summary />
+                    <Achievements />
+                    <Experience />
+                    <Skills />
+                    <Education />
+                    <Languages />
+                </main>
+            </SwipeTrail>
             <Footer />
         </div>
     )
