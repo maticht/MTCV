@@ -65,7 +65,7 @@
 
 @media (max-width: 720px) {
     .hero__subtitle {
-        margin: -1rem 0 2.6rem;
+        margin: -1rem 20px 2.6rem;
         color: var(--text);
         font-size: 17px;
         opacity: 1;

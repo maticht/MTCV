@@ -86,7 +86,7 @@ export const NeonTitle: React.FC<{ text: string }> = ({ text }) => {
     }, [text])
 
     return (
-        <div ref={wrapperRef} className="neon-title-wrapper" style={{ width: '100%' }}>
+        <div ref={wrapperRef} className="neon-title-wrapper">
             <h1
                 ref={titleRef}
                 className="hero__title neon-title"

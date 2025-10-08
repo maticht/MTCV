@@ -1,4 +1,11 @@
+.neon-title-wrapper {
+    width: calc(100%);
+    overflow: hidden;
+
+}
+
 .neon-title {
+    padding: 0 20px;
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
