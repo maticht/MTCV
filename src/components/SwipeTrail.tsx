@@ -40,29 +40,19 @@ export const SwipeTrail: React.FC<Props> = ({ children }) => {
         container.appendChild(el)
     }, [])
 
-    const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-        const r = (e.currentTarget as HTMLElement).getBoundingClientRect()
-        lastRef.current = { x: e.clientX - r.left, y: e.clientY - r.top }
-        accDistRef.current = 0
-        isDownRef.current = true
-        try { (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId) } catch {}
-    }
-
-    const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const processMove = (clientX: number, clientY: number, pointerType: string) => {
         const container = rootRef.current
         if (!container) return
 
-        const isMouse = e.pointerType === 'mouse'
+        const isMouse = pointerType === 'mouse'
         if (!isMouse && !isDownRef.current) return // touch/pen require press
 
-        const r = (e.currentTarget as HTMLElement).getBoundingClientRect()
-        const x = e.clientX - r.left
-        const y = e.clientY - r.top
+        const r = container.getBoundingClientRect()
+        const x = clientX - r.left
+        const y = clientY - r.top
 
-        // initialize last position if missing (so mouse hover starts spawning)
         if (lastRef.current == null) {
             lastRef.current = { x, y }
-            // if mouse, spawn an initial small burst so hover is visible immediately
             if (isMouse) {
                 const angle = Math.random() * Math.PI * 2
                 spawnParticle(x, y, Math.cos(angle) * 0.2, Math.sin(angle) * 0.2)
@@ -90,11 +80,48 @@ export const SwipeTrail: React.FC<Props> = ({ children }) => {
         lastRef.current = { x, y }
     }
 
+    const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+        const r = (e.currentTarget as HTMLElement).getBoundingClientRect()
+        lastRef.current = { x: e.clientX - r.left, y: e.clientY - r.top }
+        accDistRef.current = 0
+        isDownRef.current = true
+        try { (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId) } catch {}
+    }
+
+    const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+        processMove(e.clientX, e.clientY, e.pointerType)
+    }
+
     const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
         lastRef.current = null
         accDistRef.current = 0
         isDownRef.current = false
         try { (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId) } catch {}
+    }
+
+    // Touch fallbacks for browsers without PointerEvent support or to improve reliability
+    const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+        const t = e.touches[0]
+        if (!t) return
+        const container = rootRef.current
+        if (!container) return
+        const r = container.getBoundingClientRect()
+        lastRef.current = { x: t.clientX - r.left, y: t.clientY - r.top }
+        accDistRef.current = 0
+        isDownRef.current = true
+    }
+
+    const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+        const t = e.touches[0] || e.changedTouches[0]
+        if (!t) return
+        processMove(t.clientX, t.clientY, 'touch')
+        // do NOT call e.preventDefault() — allow vertical scrolling (touch-action: pan-y handles this)
+    }
+
+    const handleTouchEnd = () => {
+        lastRef.current = null
+        accDistRef.current = 0
+        isDownRef.current = false
     }
 
     return (
@@ -105,6 +132,10 @@ export const SwipeTrail: React.FC<Props> = ({ children }) => {
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
             onPointerCancel={handlePointerUp}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchEnd}
         >
             {children}
             <div className="st-layer" aria-hidden />

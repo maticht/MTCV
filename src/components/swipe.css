@@ -4,8 +4,20 @@
     width: 100%;
     max-width: 100%;
     overflow: hidden; /* prevent particles from creating horizontal scroll */
-    touch-action: none; /* keep pointer capture smooth; adjust if you need native scroll */
+    touch-action: pan-y; /* allow vertical scrolling while enabling horizontal swipe gestures */
     -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; /* prevent text selection inside the trail area */
+    -webkit-touch-callout: none; /* disable long-press callout on iOS */
+}
+
+.st-root * {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
 }
 
 .st-layer {
@@ -28,6 +40,7 @@
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.12)) brightness(1.1);
 }
 
+/* rest of CSS unchanged (shapes, keyframes, etc.) */
 .st-square {
     background: linear-gradient(180deg, var(--accent), rgba(140, 255, 204, 0.6));
     border-radius: 3px;
@@ -70,7 +83,6 @@
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.12)) brightness(1.05);
 }
 
-/* animation: move to CSS variable target, shrink and fade */
 @keyframes st-move {
     0% {
         transform: translate3d(0,0,0) scale(1) rotate(var(--rot, 0deg));
