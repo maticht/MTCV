@@ -1,5 +1,9 @@
-.neon-title { display: inline-block; line-height: 1; }
-
+.neon-title {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: visible;
+}
 .neon-letter {
     display: inline-block;
     padding: 0 2px;
@@ -7,21 +11,21 @@
     font-family: var(--font-head);
     transition: opacity 180ms ease, transform 180ms ease, filter 180ms ease;
     text-shadow:
-            0 0 6px rgba(0, 240, 181, 0.8),
-            0 0 18px rgba(0, 240, 181, 0.6),
-            0 0 36px rgba(0, 240, 181, 0.3);
+            0 0 6px rgba(0, 240, 181, 0.6),
+            0 0 18px rgba(0, 240, 181, 0.4),
+            0 0 36px rgba(0, 240, 181, 0.2);
     transform-origin: center;
 }
 
 @keyframes neon-breathe {
-    0% { filter: drop-shadow(0 0 6px rgba(0, 240, 181, 0.5)); transform: scale(1); }
-    50% { filter: drop-shadow(0 0 12px rgba(0, 240, 181, 0.7)); transform: scale(1.01); }
-    100% { filter: drop-shadow(0 0 6px rgba(0, 240, 181, 0.5)); transform: scale(1); }
+    0% { filter: drop-shadow(0 0 6px rgba(0, 240, 181, 0.3)); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 12px rgba(0, 240, 181, 0.6)); transform: scale(1.01); }
+    100% { filter: drop-shadow(0 0 6px rgba(0, 240, 181, 0.3)); transform: scale(1); }
 }
 .neon-letter { animation: neon-breathe 3.6s ease-in-out infinite; }
 
 @keyframes neon-flicker {
-    0% { opacity: 1; filter: blur(0); text-shadow: 0 0 6px rgba(0, 240, 181, 0.8); }
+    0% { opacity: 1; filter: blur(0); text-shadow: 0 0 6px rgba(0, 240, 181, 0.6); }
     10% { opacity: 0.18; filter: blur(1px); text-shadow: none; }
     22% { opacity: 1; filter: blur(0); }
     35% { opacity: 0.3; filter: blur(0.6px); text-shadow: none; }

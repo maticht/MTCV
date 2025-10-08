@@ -84,6 +84,19 @@
         font-size: 46px;
     }
 }
+@media (max-width: 420px) {
+    .hero {
+        height: 100vh;
+        padding: 3rem 0 6rem;
+        background-image: radial-gradient(
+                1200px 600px at 50% -20%,
+                color-mix(in oklab, rgba(43, 43, 43, 0.9) 16%, transparent),
+                transparent 60%
+        );
+        background-color: transparent;
+        text-align: center;
+    }
+}
 @media (max-width: 350px) {
     .hero__title {
         font-size: 36px;
