@@ -1,6 +1,7 @@
 
 .hero {
-    padding: 6rem 0 5rem;
+    height: 100vh;
+    padding: 6rem 0 6rem;
     background-image: radial-gradient(
             1200px 600px at 50% -20%,
             color-mix(in oklab, rgba(43, 43, 43, 0.9) 16%, transparent),

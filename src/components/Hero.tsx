@@ -1,12 +1,13 @@
 import { contact } from '../data/resume'
 import './hero.css'
+import {ScrollHint} from "./ScrollHint";
+import {NeonTitle} from "./NeonTitle";
 
 export const Hero = () => (
     <section className="hero" aria-label="Intro">
         <div className="hero__block">
             <div className="container">
-                <h1 className="hero__title">{contact.name}</h1>
-                <p className="hero__subtitle">System & Business Analyst · Full-Stack Developer</p>
+                <NeonTitle text={contact.name} />                <p className="hero__subtitle">System & Business Analyst · Full-Stack Developer</p>
                 <div className="hero__actions">
                     <a className="hero__btn" href={`mailto:${contact.email}`}>Email</a>
                     <a className="hero__btn btn--outline" href={contact.cv} target="_blank" rel="noreferrer">CV</a>
@@ -17,6 +18,6 @@ export const Hero = () => (
                 </div>
             </div>
         </div>
-
+        <ScrollHint/>
     </section>
 )

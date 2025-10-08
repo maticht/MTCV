@@ -8,14 +8,21 @@ export const contact = {
     cv: 'https://eu.docworkspace.com/d/sICPCipbuAd26rsUG?sa=601.1037',
 }
 
-export const summary = `System & Business Analyst with a strong software engineering background and proven experience in requirements management, system analysis, and solution design. Skilled in bridging business needs with technical implementation, delivering clear documentation, and ensuring scalable system architectures. Experienced in BRD, SRS, User Stories, BPMN, UML diagrams, and API specifications. Looking to leverage technical and analytical expertise to design efficient solutions and drive business value.`
+export const summary = `
+    System & Business Analyst with a solid software engineering background and extensive experience in transforming complex business goals into scalable, data-driven solutions. 
+    Specialized in end-to-end requirements management, system analysis, and solution design for high-load, user-centric products. Adept at bridging the gap between business vision and technical execution — translating stakeholder needs into clear BRDs, SRS documents, and user stories, supported by BPMN, UML, and ER diagrams.
+    Experienced in designing and documenting API integrations, optimizing user onboarding and conversion funnels, and conducting in-depth product analytics to drive measurable business outcomes. Skilled in collaborating with cross-functional teams, ensuring alignment across business, design, and engineering layers.
+    Driven by clarity, precision, and impact — leveraging both technical depth and analytical insight to build systems that not only function seamlessly but also deliver tangible value to users and stakeholders alike.
+`;
 
 export const achievements: string[] = [
-    'Redesigned product visuals, securing additional funding from stakeholders.',
-    'Increased onboarding conversion rate from 8.5% to 42% through analytics and process improvements.',
-    'Optimized application loading performance (12s → 8s) in file-heavy environments.',
-    'Supported seamless operation of a platform with 20,000+ DAU and a user base exceeding 1,500,000.'
-]
+    'Developed and launched a proprietary Web3 product that won a major crypto industry competition and secured investment from leading stakeholders, ensuring the project’s further growth and visibility.',
+    'Increased user conversion from registration to key in-app event from 2% to 12% and doubled retention through in-depth funnel analytics, onboarding optimization, and targeted A/B testing.',
+    'Simplified wallet creation and deposit flows by redesigning UX and optimizing interface logic, which significantly improved transaction completion rates and overall user satisfaction.',
+    'Optimized the product’s visual identity and marketing communication, enabling the application to achieve financial self-sustainability and maintain consistent user engagement.',
+    'Ensured the reliable operation of a large-scale platform serving over 20,000 daily active users and a total audience exceeding 1.5 million, maintaining performance and system stability under high load.'
+];
+
 
 export type ExperienceItem = {
     role: string
@@ -83,14 +90,14 @@ export const experience: ExperienceItem[] = [
 ]
 
 export const skills = {
-    requirements: 'BRD, SRS, User Stories, Use Cases, BPMN, UML (sequence, activity, class diagrams).',
+    analysis: 'BRD, SRS, User Stories, Use Cases, BPMN, UML (sequence, activity, class diagrams), ER diagrams, data flow modeling.',
     tools: 'Confluence, Jira, ClickUp, Miro, Figma, Postman, Swagger, Grafana.',
-    technical: 'REST/SOAP APIs, system architecture, data flow modeling.',
-    programming: 'JavaScript, TypeScript, NodeJS.',
-    backendDevOps: 'NodeJS, Linux, Docker, Kafka, Redis, Git.',
-    databases: 'SQL, ClickHouse, MongoDB.',
-    other: 'Agile/Scrum/Kanban, stakeholder communication, business process modeling.'
-}
+    systemDesign: 'System architecture, REST/SOAP APIs, integration workflows, process optimization.',
+    development: 'JavaScript, TypeScript, Node.js (practical knowledge for solution design and collaboration with engineers).',
+    backendDevOps: 'Node.js, Linux, Docker, Kafka, Redis, Git (supporting scalable system deployment).',
+    databases: 'SQL, ClickHouse, MongoDB; data modeling and query optimization.',
+    methodologies: 'Agile/Scrum/Kanban, stakeholder communication, business process modeling, requirement elicitation and prioritization.'
+};
 
 export const education = {
     school: 'Belarusian State University',
@@ -100,4 +107,10 @@ export const education = {
     program: 'Energy efficient technologies and energy management'
 }
 
-export const languages = ['English (B2)', 'Polish (B2)', 'Russian (C1)']
+export const languages = [
+    'Russian (C1)',
+    'English (B2)',
+    'Polish (B2)',
+    'Ukrainian (B1)',
+    'Belarusian (B1)'
+];

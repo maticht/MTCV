@@ -19,7 +19,9 @@
     letter-spacing: .5px;
     font-size: 36px;
     color: var(--accent);
+    text-shadow: 0 0 20px color-mix(in oklab, var(--accent) 55%, transparent);
     text-transform: uppercase;
+    text-decoration: none;
 }
 .nav {
     display:flex;
