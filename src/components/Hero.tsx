@@ -8,7 +8,7 @@ export const Hero = () => (
         <div className="hero__block">
             <div className="container" style={{ padding: ' 0 0 20px' }}>
                 <NeonTitle text={contact.name} />
-                <p className="hero__subtitle">System & Business Analyst · Full-Stack Developer</p>
+                <p className="hero__subtitle">System & Business Analyst</p>
                 <div className="hero__actions">
                     <a className="hero__btn" href={`mailto:${contact.email}`}>Email</a>
                     <a className="hero__btn btn--outline" href={contact.cv} target="_blank" rel="noreferrer">CV</a>

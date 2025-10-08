@@ -13,17 +13,18 @@ function App() {
     return (
         <div className="app">
             <Header />
-            <SwipeTrail>
-                <main>
-                    <Hero />
-                    <Summary />
-                    <Achievements />
-                    <Experience />
-                    <Skills />
-                    <Education />
-                    <Languages />
-                </main>
-            </SwipeTrail>
+            {/*<SwipeTrail>*/}
+            {/*    */}
+            {/*</SwipeTrail>*/}
+            <main>
+                <Hero />
+                <Summary />
+                <Achievements />
+                <Experience />
+                <Skills />
+                <Education />
+                <Languages />
+            </main>
             <Footer />
         </div>
     )
