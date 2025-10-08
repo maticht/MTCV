@@ -5,7 +5,7 @@ export const contact = {
     location: 'Poland',
     linkedin: 'https://www.linkedin.com/in/matveytreyvas/',
     github: 'https://github.com/maticht',
-    cv: 'https://eu.docworkspace.com/d/sICPCipbuAd26rsUG?sa=601.1037',
+    cv: 'https://eu.docs.wps.com/module/common/preview/?sid=sIHHCipbuAcnvmscG',
 }
 
 export const summary = `
