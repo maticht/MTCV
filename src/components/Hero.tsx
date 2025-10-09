@@ -10,8 +10,8 @@ export const Hero = () => (
                 <NeonTitle text={contact.name} />
                 <p className="hero__subtitle">System & Business Analyst</p>
                 <div className="hero__actions">
-                    <a className="hero__btn" href={`mailto:${contact.email}`}>Email</a>
-                    <a className="hero__btn btn--outline" href={contact.cv} target="_blank" rel="noreferrer">CV</a>
+                    <a className="hero__btn hero_animatit__btn" href={contact.cv} target="_blank" rel="noreferrer">CV</a>
+                    <a className="hero__btn btn--outline hero_animatit__btn" href={`mailto:${contact.email}`}>Email</a>
                 </div>
                 <div className="hero__actions">
                     <a className="hero__btn btn--ghost" href={contact.github} target="_blank" rel="noreferrer">GitHub</a>
