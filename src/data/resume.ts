@@ -5,7 +5,7 @@ export const contact = {
     location: 'Poland',
     linkedin: 'https://www.linkedin.com/in/matveytreyvas/',
     github: 'https://github.com/maticht',
-    cv: 'https://eu.docs.wps.com/module/common/preview/?sid=sIHHCipbuAcnvmscG',
+    cv: 'https://eu.docs.wps.com/module/common/preview/?sid=sIBXCipbuAZHciMgG',
 }
 
 export const summary = `
@@ -90,7 +90,7 @@ export const experience: ExperienceItem[] = [
 ]
 
 export const skills = {
-    analysis: 'BRD, SRS, User Stories, Use Cases, BPMN, UML (sequence, activity, class diagrams), ER diagrams, data flow modeling.',
+    analysis: 'BRD, SRS, User Stories, Use Cases, BPMN, UML (sequence, activity, class diagrams), ER diagrams, C4, data flow modeling.',
     tools: 'Confluence, Jira, ClickUp, Miro, Figma, Postman, Swagger, Grafana.',
     systemDesign: 'System architecture, REST/SOAP APIs, integration workflows, process optimization.',
     development: 'JavaScript, TypeScript, Node.js (practical knowledge for solution design and collaboration with engineers).',
@@ -108,7 +108,7 @@ export const education = {
 }
 
 export const languages = [
-    'Russian (C1)',
+    'Russian (C2)',
     'English (B2)',
     'Polish (B2)',
     'Ukrainian (B1)',
