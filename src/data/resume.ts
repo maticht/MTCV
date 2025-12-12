@@ -5,14 +5,18 @@ export const contact = {
     location: 'Poland',
     linkedin: 'https://www.linkedin.com/in/matveytreyvas/',
     github: 'https://github.com/maticht',
-    cv: 'https://eu.docs.wps.com/module/common/preview/?sid=sIBXCipbuAZHciMgG',
+    telegram: 'https://t.me/MatsveiTreivas',
+    cv: 'https://eu.docs.wps.com/module/common/preview/?sid=sIHHCipbuAcnvmscG',
 }
 
 export const summary = `
-    System & Business Analyst with a solid software engineering background and extensive experience in transforming complex business goals into scalable, data-driven solutions. 
-    Specialized in end-to-end requirements management, system analysis, and solution design for high-load, user-centric products. Adept at bridging the gap between business vision and technical execution — translating stakeholder needs into clear BRDs, SRS documents, and user stories, supported by BPMN, UML, and ER diagrams.
-    Experienced in designing and documenting API integrations, optimizing user onboarding and conversion funnels, and conducting in-depth product analytics to drive measurable business outcomes. Skilled in collaborating with cross-functional teams, ensuring alignment across business, design, and engineering layers.
-    Driven by clarity, precision, and impact — leveraging both technical depth and analytical insight to build systems that not only function seamlessly but also deliver tangible value to users and stakeholders alike.
+    Senior System Analyst with a strong engineering mindset and hands-on experience in shaping complex, high-load systems.
+    Focused on translating business intent into robust system designs, clear technical requirements, and architecture-aligned specifications.
+    Specialized in end-to-end system analysis, solution discovery, and requirement definition for scalable platforms.
+    Experienced in working closely with architects and engineering teams to define system boundaries, integrations, data flows, and non-functional requirements.
+    Skilled in producing high-quality BRD, system and integration specifications, API contracts, and architectural documentation supported by C4, sequence, data-flow, and ER diagrams.
+    Strong domain understanding enables proactive identification of risks, dependencies, and architectural impacts early in the delivery lifecycle.
+    Driven by clarity, structure, and technical rigor, ensuring that business goals are realized through well-designed, maintainable, and resilient systems.
 `;
 
 export const achievements: string[] = [
@@ -33,9 +37,30 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
     {
+        role: 'Senior System Analyst',
+        company: 'RedCore',
+        period: 'Dec 2025 – Present',
+        bullets: [
+            'Translating business goals into clear, structured and actionable technical requirements',
+            'Creating comprehensive BRD/TSD/integration specs with defined scope, constraints and acceptance criteria',
+            'Leading discovery sessions and ensuring alignment across product, architecture and engineering',
+            'Assessing initiatives end-to-end, identifying risks, dependencies and architectural impacts',
+            'Producing high-quality use cases, interaction flows and technical diagrams for solution design',
+            'Partnering with architects to refine system boundaries and document key decisions',
+            'Maintaining deep domain knowledge to support planning and guide technical direction',
+            'Preparing impact analyses covering performance, reliability, integrations and operational considerations',
+            'Improving documentation standards, templates and knowledge structure across the domain',
+            'Supporting refinement and planning by shaping epics/stories and ensuring clarity for delivery teams',
+            'Acting as the main point for requirement alignment during development',
+            'Driving initiatives through the full lifecycle with strong ownership and accountability',
+            'Documenting business flows, constraints, edge cases and non-functional requirements',
+            'Fostering strong cross-team collaboration and maintaining high communication standards'
+        ]
+    },
+    {
         role: 'System Analyst',
         company: 'Aurora Labs',
-        period: 'Mar 2024 – Present',
+        period: 'Jan 2024 – Dec 2025',
         bullets: [
             'Acted as a liaison between business stakeholders and the development team, translating business goals into BRD, SRS, user stories, and use cases for game mechanics and microtransactions.',
             'Analyzed business requirements for a high-load Web3 application, designing system architecture diagrams, BPMN workflows, and data flows to ensure scalability and performance.',
@@ -90,7 +115,7 @@ export const experience: ExperienceItem[] = [
 ]
 
 export const skills = {
-    analysis: 'BRD, SRS, User Stories, Use Cases, BPMN, UML (sequence, activity, class diagrams), ER diagrams, C4, data flow modeling.',
+    analysis: 'BRD, SRS, User Stories, Use Cases, BPMN, UML (sequence, activity, class diagrams), ER diagrams, data flow modeling.',
     tools: 'Confluence, Jira, ClickUp, Miro, Figma, Postman, Swagger, Grafana.',
     systemDesign: 'System architecture, REST/SOAP APIs, integration workflows, process optimization.',
     development: 'JavaScript, TypeScript, Node.js (practical knowledge for solution design and collaboration with engineers).',
