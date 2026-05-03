@@ -28,7 +28,7 @@ export const Hero = () => {
                             <a className="hero__btn btn--outline hero_animatit__btn" href={contact.cv} target="_blank" rel="noreferrer">CV</a>
                         </div>
                         <div className="hero__actions">
-                            <a className="hero__btn btn--ghost" href={contact.github} target="_blank" rel="noreferrer">GitHub</a>
+                            <a className="hero__btn btn--ghost" href={contact.telegram} target="_blank" rel="noreferrer">Telegram</a>
                             <a className="hero__btn btn--ghost" href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
                         </div>
                     </div>
