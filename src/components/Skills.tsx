@@ -1,4 +1,4 @@
-import {skills} from '../data/resume'
+import { skills } from '../data/resume'
 
 export const Skills = () => (
     <section id="skills" className="section radial-accent-bg">

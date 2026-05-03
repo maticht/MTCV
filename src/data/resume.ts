@@ -5,16 +5,23 @@ export const contact = {
     location: 'Poland',
     linkedin: 'https://www.linkedin.com/in/matveytreyvas/',
     github: 'https://github.com/maticht',
-    cv: 'https://eu.docworkspace.com/d/sICPCipbuAd26rsUG?sa=601.1037',
+        telegram: 'https://t.me/MatsveiTreivas',
+    cv: 'https://eu.wps.com/l/cbOakujGs7aZoTE3',
 }
 
-export const summary = `System & Business Analyst with a strong software engineering background and proven experience in requirements management, system analysis, and solution design. Skilled in bridging business needs with technical implementation, delivering clear documentation, and ensuring scalable system architectures. Experienced in BRD, SRS, User Stories, BPMN, UML diagrams, and API specifications. Looking to leverage technical and analytical expertise to design efficient solutions and drive business value.`
+export const summary = `
+Senior System Analyst with a software engineering background and hands-on experience turning business goals into architecture-aligned technical solutions.
+
+Focused on requirements analysis, solution design, integration modeling, and technical documentation for scalable, reliable, and high-load systems. Strong in preparing BRD, SRS, TSD, ADRs, API specifications, BPMN, UML, ERD, and system diagrams that help teams move from discovery to implementation with clarity.
+
+Comfortable working across product, architecture, engineering, QA, and DevOps, balancing business needs with technical constraints, non-functional requirements, and delivery readiness.
+`;
 
 export const achievements: string[] = [
-    'Redesigned product visuals, securing additional funding from stakeholders.',
-    'Increased onboarding conversion rate from 8.5% to 42% through analytics and process improvements.',
-    'Optimized application loading performance (12s → 8s) in file-heavy environments.',
-    'Supported seamless operation of a platform with 20,000+ DAU and a user base exceeding 1,500,000.'
+    'Increased onboarding conversion rate from 8.5% to 42% through analytics, flow improvements, and product recommendations.',
+    'Supported delivery and stable operation of a platform with 20,000+ DAU and more than 1,500,000 users.',
+    'Improved wallet and deposit journeys, reducing friction in financial operations and strengthening user experience.',
+    'Produced architecture and requirements documentation that improved cross-functional alignment and implementation readiness.'
 ]
 
 export type ExperienceItem = {
@@ -26,78 +33,89 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
     {
+        role: 'Senior System Analyst',
+        company: 'RedCore',
+        period: 'Dec 2025 - Present',
+        bullets: [
+            'Translate business goals into architecture-aligned technical requirements.',
+            'Design solution approaches for scalable, reliable, and high-load systems.',
+            'Prepare architectural documentation, including solution design, TSD, ADRs, and integration specifications.',
+            'Create system, sequence, component, and data flow diagrams.',
+            'Define system boundaries, integration patterns, API contracts, and data exchange flows.',
+            'Assess architectural impacts, dependencies, risks, and trade-offs across initiatives.',
+            'Document non-functional requirements for performance, scalability, availability, reliability, and security.',
+            'Support architects and engineering teams in solution design and technical decision-making.',
+            'Drive requirements clarification across product, architecture, engineering, QA, and DevOps.',
+            'Ensure documentation quality, consistency, and readiness for implementation.',
+            'Support delivery through the full lifecycle from discovery and design to release readiness.'
+        ]
+    },
+    {
         role: 'System Analyst',
         company: 'Aurora Labs',
-        period: 'Mar 2024 – Present',
+        period: 'Dec 2023 - Dec 2025',
         bullets: [
             'Acted as a liaison between business stakeholders and the development team, translating business goals into BRD, SRS, user stories, and use cases for game mechanics and microtransactions.',
             'Analyzed business requirements for a high-load Web3 application, designing system architecture diagrams, BPMN workflows, and data flows to ensure scalability and performance.',
             'Conducted user behavior analysis, retention studies, and A/B testing, recommending improvements to onboarding and gameplay features.',
             'Optimized wallet integration and in-game deposit flows, improving user experience and reducing friction in financial operations.',
             'Collaborated with engineers on the selection, deployment, and configuration of infrastructure, ensuring alignment with business and technical requirements.',
-            'Developed SQL queries and dashboards in analytical databases (ClickHouse, SQL), delivering data-driven insights for stakeholders.',
-            'Designed and documented API specifications, and integration workflows for Web3 features and AI agents.'
+            'Developed SQL queries and dashboards in analytical databases, including ClickHouse, delivering data-driven insights for stakeholders.',
+            'Designed and documented API specifications and integration workflows for Web3 features and AI agents.'
         ]
     },
     {
-        role: 'Front-End',
-        company: 'Andersen',
-        period: 'Jul 2023 – Jun 2024',
+        role: 'Frontend Developer',
+        company: 'Andersen Lab',
+        period: 'Jun 2023 - Jun 2024',
         bullets: [
             'Developed and maintained applications for a comprehensive healthcare platform, focusing on patient, financial, and resource management.',
-            'Optimized app performance, identified and fixed bugs, and performed code reviews to enforce best practices and ensure code quality.',
+            'Optimized application performance, identified and fixed bugs, and performed code reviews to enforce best practices and ensure code quality.',
             'Provided technical reports and insights to stakeholders and managed technical aspects of the project.',
             'Wrote and maintained unit tests to ensure application reliability.'
         ]
     },
     {
-        role: 'Front-End',
-        company: 'Quant Network',
-        period: 'Oct 2022 – Sep 2023',
+        role: 'Frontend Developer',
+        company: 'Quant',
+        period: 'Oct 2022 - Oct 2023',
         bullets: [
             'Developed and maintained React applications for a comprehensive healthcare platform, focusing on patient, financial, and resource management.',
-            'Optimized app performance, identified and fixed bugs, and performed code reviews to enforce best practices and ensure code quality.',
+            'Optimized application performance, identified and fixed bugs, and performed code reviews to enforce best practices and ensure code quality.',
             'Provided technical reports and insights to stakeholders and managed technical aspects of the project.',
             'Wrote and maintained unit tests to ensure application reliability.'
         ]
     },
     {
-        role: 'Full-Stack',
+        role: 'Full-stack Developer',
         company: 'VironIT',
-        period: 'Feb 2022 – Jul 2022',
+        period: 'Oct 2021 - Jul 2022',
         bullets: [
-            'Gained practical training in a commercial project, implementing client-server interactions and API connections.',
-            'Managed non-relational databases, assisting in the design and optimization of schemas and queries.',
-            'Identified and solved problems in web projects, including debugging and performance optimization.'
-        ]
-    },
-    {
-        role: 'Trainee Back-End',
-        company: 'Itransition Group',
-        period: 'Sep 2021 – Dec 2021',
-        bullets: [
-            'Completed a training program focused on backend development, improving problem-solving and algorithmic thinking.',
-            'Gained experience in managing packages, processing server requests, and working with HTTP and REST API protocols.'
+            'Contributed to a commercial web project, implementing client-server communication and REST API integrations.',
+            'Worked with HTTP protocols, request handling, package management, and backend service interaction.',
+            'Supported non-relational database design, schema adjustments, and query optimization.',
+            'Participated in debugging, issue analysis, and performance improvements across web application components.',
+            'Collaborated with the development team to understand system behavior, data flows, and integration logic.'
         ]
     }
 ]
 
 export const skills = {
-    requirements: 'BRD, SRS, User Stories, Use Cases, BPMN, UML (sequence, activity, class diagrams).',
-    tools: 'Confluence, Jira, ClickUp, Miro, Figma, Postman, Swagger, Grafana.',
-    technical: 'REST/SOAP APIs, system architecture, data flow modeling.',
-    programming: 'JavaScript, TypeScript, NodeJS.',
-    backendDevOps: 'NodeJS, Linux, Docker, Kafka, Redis, Git.',
-    databases: 'SQL, ClickHouse, MongoDB.',
-    other: 'Agile/Scrum/Kanban, stakeholder communication, business process modeling.'
+    requirements: 'BRD, SRS, V&S, User Stories, Use Cases, NFRs, BPMN, ER, C4, UML.',
+    tools: 'Jira, Confluence, AWS, Miro, Figma, Postman, Swagger/OpenAPI, Grafana, ClickUp.',
+    technical: 'Solution Design, TSD, Integration Specs, API Specs, ADR, RFC, HLD/LLD, system context and component diagrams.',
+    programming: 'JavaScript/TypeScript, Node.js.',
+    backendDevOps: 'Docker, Kubernetes, Git, Linux.',
+    databases: 'REST/SOAP, API contracts, SQL, ClickHouse, MongoDB, data modeling, ERD, and data flow diagrams.',
+    other: 'System decomposition, service boundaries, integration patterns, scalability, reliability, high-load considerations, Agile, Scrum/Kanban, SDLC, discovery, refinement, and stakeholder communication.'
 }
 
 export const education = {
     school: 'Belarusian State University',
     location: 'Minsk, Belarus',
-    period: 'Sep 2019 – Jun 2023',
+    period: 'Sep 2019 - Jun 2023',
     degree: "Bachelor's Degree in Electrical Power Engineering",
     program: 'Energy efficient technologies and energy management'
 }
 
-export const languages = ['English (B2)', 'Polish (B2)', 'Russian (C1)']
+export const languages = ['Russian (C2)', 'English (B2)', 'Polish (B2)', 'Ukrainian (B1)']

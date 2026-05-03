@@ -1,0 +1,144 @@
+.sideNav {
+    position: fixed;
+    top: 50%;
+    right: .9rem;
+    z-index: 70;
+    transform: translateY(-50%);
+}
+
+.sideNav__rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: .7rem .58rem;
+    border: 1px solid color-mix(in oklab, var(--accent) 16%, var(--surface-2));
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--surface) 92%, transparent);
+    box-shadow: 0 0 14px color-mix(in oklab, var(--accent) 5%, transparent);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+}
+
+.sideNav__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--muted) 56%, transparent);
+    transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+
+.sideNav__dot--active {
+    transform: scale(1.22);
+    background: color-mix(in oklab, var(--accent) 90%, white);
+    box-shadow: 0 0 8px color-mix(in oklab, var(--accent) 36%, transparent);
+}
+
+.sideNavModal {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    pointer-events: none;
+}
+
+.sideNavModal__backdrop {
+    position: absolute;
+    inset: 0;
+    border: none;
+    background: transparent;
+    opacity: 0;
+}
+
+.sideNavModal__panel {
+    position: absolute;
+    top: 50%;
+    right: 3.9rem;
+    width: min(250px, calc(100vw - 2rem));
+    padding: .8rem;
+    border: 1px solid color-mix(in oklab, var(--accent) 14%, var(--surface-2));
+    border-radius: 18px;
+    background: color-mix(in oklab, var(--surface) 98%, transparent);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .32);
+    opacity: 0;
+    transform: translate3d(8px, -50%, 0) scale(.98);
+    transition: opacity .18s ease, transform .18s ease;
+}
+
+.sideNavModal--open {
+    pointer-events: auto;
+}
+
+.sideNavModal--open .sideNavModal__panel {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0) scale(1);
+}
+
+.sideNavModal__list {
+    display: grid;
+    gap: .4rem;
+    margin-bottom: .65rem;
+}
+
+.sideNavModal__item {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    gap: .55rem;
+    padding: .62rem .72rem;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    color: var(--text);
+    text-decoration: none;
+    background: color-mix(in oklab, var(--surface) 74%, transparent);
+    transition: border-color .18s ease, background-color .18s ease;
+}
+
+.sideNavModal__item--active,
+.sideNavModal__item:hover {
+    border-color: color-mix(in oklab, var(--accent) 18%, var(--surface-2));
+    background: color-mix(in oklab, var(--surface) 92%, transparent);
+}
+
+.sideNavModal__index {
+    color: color-mix(in oklab, var(--accent) 78%, white);
+    font-size: .76rem;
+    letter-spacing: .12em;
+}
+
+.sideNavModal__contact {
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 720px) {
+    .sideNav {
+        top: auto;
+        right: 1rem;
+        bottom: 1rem;
+        transform: none;
+    }
+
+    .sideNav__rail {
+        gap: .42rem;
+        padding: .62rem .52rem;
+    }
+
+    .sideNavModal__panel {
+        top: auto;
+        right: 1rem;
+        bottom: 4.4rem;
+        transform: translate3d(0, 8px, 0) scale(.98);
+    }
+
+    .sideNavModal--open .sideNavModal__panel {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sideNav__dot,
+    .sideNavModal__panel,
+    .sideNavModal__item {
+        transition: none;
+    }
+}

@@ -8,7 +8,6 @@ export const Header = () => {
                 <div className="logo">MT</div>
                 <nav className="nav">
                     <a href="#summary">Summary</a>
-                    <a href="#achievements">Achievements</a>
                     <a href="#experience">Experience</a>
                     <a href="#skills">Skills</a>
                     <a href="#education">Education</a>

@@ -1,4 +1,6 @@
 .header {
+    --header-height: 72px;
+    --header-height-mobile: 64px;
     position: sticky;
     top: 0;
     z-index: 50;
@@ -14,6 +16,10 @@
     padding: 5px 20px 5px !important;
 }
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 89px;
     font-family: var(--font-head);
     font-weight: 800;
     letter-spacing: .5px;
@@ -32,4 +38,10 @@
 }
 .nav a:hover {
     color: var(--accent);
+}
+
+@media (max-width: 720px) {
+    .header {
+        --header-height: 64px;
+    }
 }

@@ -2,6 +2,11 @@
     box-sizing: border-box
 }
 
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
 html, body, #root {
     height: 100%
 }
@@ -11,6 +16,15 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: var(--font);
+    -ms-overflow-style: none;
+}
+
+body.body--modalOpen {
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 :root {
     --grid-size: 68px;
@@ -57,6 +71,7 @@ main {
 }
 main {
     display: block;
+    padding-bottom: 28vh;
     --pg-w: 700px;
     --pg-h: 1200px;
     --pg-strength: 12%;
@@ -102,6 +117,7 @@ main {
 
 @media (max-width: 500px) {
     main {
+        padding-bottom: 34vh;
         --pg-w: 720px;
         --pg-h: 1400px;
         --pg-strength: 8%;
@@ -114,7 +130,8 @@ main {
     }
 }
 .section {
-    padding: 3.2rem 0
+    padding: 3.2rem 0;
+    scroll-margin-top: 28px
 }
 
 .section__title {

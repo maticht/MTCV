@@ -6,7 +6,7 @@ export const Education = () => (
             <h2 className="section__title">Education</h2>
             <div className="card">
                 <h4>{education.school}</h4>
-                <p className="muted">{education.location} · {education.period}</p>
+                <p className="muted">{education.location} - {education.period}</p>
                 <p>{education.program}</p>
                 <p>{education.degree}</p>
             </div>
