@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { contact } from '../data/resume'
 import './hero.css'
+import {ScrollHint} from "./ScrollHint";
+import {NeonTitle} from "./NeonTitle";
 
 export const Hero = () => {
     const [isScrolled, setIsScrolled] = useState(false)

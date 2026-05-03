@@ -6,7 +6,7 @@ export const Footer = () => (
             <div>(c) {new Date().getFullYear()} {contact.name}</div>
             <div className="footer__links">
                 <a href={`mailto:${contact.email}`}>{contact.email}</a>
-                <a href={contact.github} target="_blank" rel="noreferrer">GitHub</a>
+                <a href={contact.telegram} target="_blank" rel="noreferrer">Telegram</a>
                 <a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
         </div>

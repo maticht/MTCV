@@ -1,0 +1,101 @@
+.st-root {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* prevent particles from creating horizontal scroll */
+    touch-action: pan-y; /* allow vertical scrolling while enabling horizontal swipe gestures */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; /* prevent text selection inside the trail area */
+    -webkit-touch-callout: none; /* disable long-press callout on iOS */
+}
+
+.st-root * {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+
+.st-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.st-particle {
+    position: absolute;
+    width: var(--size, 12px);
+    height: var(--size, 12px);
+    transform-origin: center;
+    will-change: transform, opacity, filter;
+    animation-name: st-move;
+    animation-timing-function: cubic-bezier(.2,.9,.2,1);
+    animation-fill-mode: forwards;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.12)) brightness(1.1);
+}
+
+/* rest of CSS unchanged (shapes, keyframes, etc.) */
+.st-square {
+    background: linear-gradient(180deg, var(--accent), rgba(140, 255, 204, 0.6));
+    border-radius: 3px;
+    transform: rotate(var(--rot, 0deg));
+    box-shadow: 0 0 10px rgba(255,255,255,0.12), 0 0 22px var(--accent, rgba(53, 255, 177, 0.25));
+}
+
+.st-plus {
+    background: transparent;
+    width: calc(var(--size,12px) * 1.2);
+    height: calc(var(--size,12px) * 1.2);
+    position: absolute;
+}
+.st-plus::before,
+.st-plus::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: linear-gradient(180deg, var(--accent), rgba(140, 255, 204, 0.6));
+    transform: translate(-50%, -50%);
+}
+.st-plus::before {
+    width: 60%;
+    height: 24%;
+    border-radius: 2px;
+}
+.st-plus::after {
+    width: 24%;
+    height: 60%;
+    border-radius: 2px;
+}
+
+.st-triangle {
+    width: 0;
+    height: 0;
+    border-left: calc(var(--size,12px) / 2) solid transparent;
+    border-right: calc(var(--size,12px) / 2) solid transparent;
+    border-bottom: var(--size,12px) solid var(--accent);
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.12)) brightness(1.05);
+}
+
+@keyframes st-move {
+    0% {
+        transform: translate3d(0,0,0) scale(1) rotate(var(--rot, 0deg));
+        opacity: 1;
+        filter: blur(0px) drop-shadow(0 0 10px rgba(255,255,255,0.18));
+    }
+    100% {
+        transform: translate3d(var(--tx, 0px), var(--ty, 0px), 0) scale(0.25) rotate(calc(var(--rot, 0deg) + 30deg));
+        opacity: 0;
+        filter: blur(3px) drop-shadow(0 0 18px rgba(255,255,255,0.25));
+    }
+}
+
+@media (max-width: 500px) {
+    .st-particle { filter: drop-shadow(0 0 5px rgba(255,255,255,0.12)); }
+}

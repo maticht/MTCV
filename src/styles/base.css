@@ -10,7 +10,55 @@ html {
 html, body, #root {
     height: 100%
 }
+:root {
+    --header-height: 64px;
+}
 
+html, body {
+    scroll-behavior: smooth;
+}
+
+section,
+[id] {
+    scroll-margin-top: calc(var(--header-height) + 48px);
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+    background: rgba(11, 11, 13, 0.2);
+    border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent), var(--accent));
+    border-radius: 999px;
+    box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent);
+    border: 2px solid rgba(255,255,255,0.04);
+    transition: transform 150ms ease, filter 150ms ease;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) rgba(11, 11, 13, 0.2);
+}
+
+html::-webkit-scrollbar-track-piece,
+body::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
 body {
     margin: 0;
     background: var(--bg);
@@ -215,6 +263,7 @@ main {
 }
 .card p {
     margin: 0;
+    color: var(--muted);
 }
 
 .list {
@@ -274,4 +323,9 @@ main {
 
 .footer a:hover {
     color: var(--accent)
+}
+@media (max-width: 720px) {
+    .section__title {
+        font-size: clamp(2.1rem, 6.4vw, 2.6rem);
+    }
 }
