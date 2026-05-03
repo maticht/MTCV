@@ -77,10 +77,6 @@
     transition: transform .15s ease, opacity .2s
 }
 
-.hero__btn:hover {
-    transform: translateY(-1px);
-    opacity: .95
-}
 .hero_animatit__btn {
     box-shadow: inset 0 0px 9px rgb(8, 89, 67), 0 0px 22px rgba(34, 213, 161, 0.3);
 }
@@ -321,9 +317,6 @@
 
 @media (prefers-reduced-motion: reduce) {
     .hero__scrollCue,
-    .hero__btn {
-        transition: none;
-    }
 
     .hero__scrollDot,
     .hero__swipeFinger {

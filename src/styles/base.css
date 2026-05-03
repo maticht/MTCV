@@ -217,7 +217,6 @@ main {
 }
 
 .btn:hover {
-    transform: translateY(-1px);
     opacity: .95
 }
 
