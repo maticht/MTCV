@@ -24,8 +24,8 @@ export const Hero = () => {
                         <h1 className="hero__title">{contact.name}</h1>
                         <p className="hero__subtitle">Senior System Analyst - Solution & Requirements Design</p>
                         <div className="hero__actions">
-                            <a className="hero__btn hero__btn--glow" href={`mailto:${contact.email}`}>Email</a>
-                            <a className="hero__btn btn--outline" href={contact.cv} target="_blank" rel="noreferrer">CV</a>
+                            <a className="hero__btn hero_animatit__btn" href={`mailto:${contact.email}`}>Email</a>
+                            <a className="hero__btn btn--outline hero_animatit__btn" href={contact.cv} target="_blank" rel="noreferrer">CV</a>
                         </div>
                         <div className="hero__actions">
                             <a className="hero__btn btn--ghost" href={contact.github} target="_blank" rel="noreferrer">GitHub</a>
